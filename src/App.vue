@@ -25,15 +25,11 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
-import Footer from './components/Footer';
-import NaviBar from './components/NavigationBar'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    Footer,
-    NaviBar
+    HelloWorld
   },
   data() {
     return {
