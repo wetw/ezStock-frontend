@@ -1,3 +1,6 @@
 {
-  "hello": "你好 世界"
+  "hello": "你好 世界",
+  "home":{
+    "changeLang": "切換語系"
+  }
 }

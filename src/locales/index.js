@@ -7,7 +7,7 @@ import enUS from './en-US.json';
 
 Vue.use(VueI18n);
 
-const locale = 'zh-TW';
+const locale = 'en-US';
 
 const messages = {
   'en-US': enUS,

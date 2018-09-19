@@ -1,3 +1,6 @@
 {
-  "hello": "Hellow Wolrd"
+  "hello": "Hellow Wolrd",
+  "home":{
+    "changeLang": "Change Language"
+  }
 }
