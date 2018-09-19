@@ -11,6 +11,8 @@
             </small>
           </footer>
         </blockquote>
+        <router-link to="/foo">Go to Foo</router-link>
+        <router-link to="/bar">Go to Bar</router-link>
       </v-layout>
     </v-slide-y-transition>
   </v-container>

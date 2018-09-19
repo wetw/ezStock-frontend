@@ -1,7 +1,11 @@
 <template>
-  <v-app>
-    <v-navigation-drawer persistent permanent :width="200" :mini-variant="miniVariant" :clipped="clipped" enable-resize-watcher fixed app>
-      <v-list>
+  <v-app dark>
+    <v-toolbar app fixed clipped-left>
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title>Application</v-toolbar-title>
+    </v-toolbar>
+    <v-navigation-drawer v-model="drawer" :width="200" clipped enable-resize-watcher fixed app>
+      <v-list dense>
         <v-list-tile value="true" v-for="(item, i) in items" :key="i">
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
@@ -11,14 +15,10 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
-      <v-btn bottom fixed icon @click.stop="miniVariant = !miniVariant">
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'">
-        </v-icon>
-        <p style="margin-left: 80px; position: absolute;" v-if="!miniVariant">Collapse sidebar</p>
-      </v-btn>
     </v-navigation-drawer>
-    <v-content>
+    <v-content fluid fill-height>
       <HelloWorld/>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
@@ -31,15 +31,13 @@ export default {
   components: {
     HelloWorld
   },
-  data() {
-    return {
-      clipped: false,
-      items: [
-        { title: 'Home', icon: 'dashboard' },
-        { title: 'About', icon: 'question_answer' }
-      ],
-      miniVariant: true,
-    }
-  }
+  data: () => ({
+    drawer: true,
+    items: [
+      { title: 'Home', icon: 'dashboard' },
+      { title: 'About', icon: 'question_answer' }
+    ],
+    miniVariant: true,
+  })
 }
 </script>
