@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import HelloWorld from '@/components/HelloWorld';
 
 Vue.use(VueRouter)
 const Foo = {
@@ -17,6 +18,10 @@ export default new VueRouter({
     {
       path: '/bar',
       component: Bar
+    },
+    {
+      path: '/',
+      component: HelloWorld
     }
   ]
 });

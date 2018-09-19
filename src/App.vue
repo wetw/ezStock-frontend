@@ -6,7 +6,7 @@
     </v-toolbar>
     <v-navigation-drawer v-model="drawer" :width="200" clipped enable-resize-watcher fixed app>
       <v-list dense>
-        <v-list-tile value="true" v-for="(item, i) in items" :key="i">
+        <v-list-tile value="true" v-for="(item, i) in items" :key="i" :to="item.to">
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
           </v-list-tile-action>
@@ -17,7 +17,6 @@
       </v-list>
     </v-navigation-drawer>
     <v-content fluid fill-height>
-      <HelloWorld/>
       <router-view></router-view>
     </v-content>
   </v-app>
@@ -34,8 +33,8 @@ export default {
   data: () => ({
     drawer: true,
     items: [
-      { title: 'Home', icon: 'dashboard' },
-      { title: 'About', icon: 'question_answer' }
+      { title: 'Home', icon: 'dashboard', to: '/' },
+      { title: 'About', icon: 'question_answer', to: '/foo' }
     ],
     miniVariant: true,
   })
