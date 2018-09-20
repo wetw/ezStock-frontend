@@ -40,14 +40,10 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 import { mapState } from 'vuex';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
   data: () => ({
     drawer: false,
     langs: [
