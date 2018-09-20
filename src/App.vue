@@ -23,7 +23,7 @@
     </v-toolbar>
     <v-navigation-drawer v-model="drawer" :width="200" clipped enable-resize-watcher fixed app>
       <v-list dense>
-        <v-list-tile value="true" v-for="(item, i) in items" :key="i" :to="item.to">
+        <v-list-tile value="true" v-for="(item, i) in menu" :key="i" :to="item.to">
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
           </v-list-tile-action>
@@ -41,6 +41,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import { mapState } from 'vuex';
 
 export default {
   name: 'App',
@@ -49,11 +50,6 @@ export default {
   },
   data: () => ({
     drawer: false,
-    items: [
-      { title: 'Home', icon: 'home', to: '/' },
-      { title: 'About', icon: 'question_answer', to: '/foo' }
-    ],
-    miniVariant: true,
     langs: [
       { title: '繁體中文', value: 'zh-TW' },
       { title: 'English', value: 'en-US' }
@@ -65,6 +61,9 @@ export default {
         this.$i18n.locale = lang;
       }
     }
+  },
+  computed: {
+    ...mapState(['menu'])
   }
 }
 </script>
