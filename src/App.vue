@@ -48,9 +48,9 @@ export default {
     HelloWorld
   },
   data: () => ({
-    drawer: true,
+    drawer: false,
     items: [
-      { title: 'Home', icon: 'dashboard', to: '/' },
+      { title: 'Home', icon: 'home', to: '/' },
       { title: 'About', icon: 'question_answer', to: '/foo' }
     ],
     miniVariant: true,
