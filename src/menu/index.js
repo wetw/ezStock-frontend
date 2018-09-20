@@ -1,11 +1,11 @@
 export default [{
-    title: 'Home',
+    title: 'home',
     icon: 'home',
-    to: '/'
+    href: '/'
   },
   {
-    title: 'About',
+    title: 'about',
     icon: 'question_answer',
-    to: '/foo'
+    href: '/foo'
   }
 ]

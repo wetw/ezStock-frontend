@@ -1,6 +1,10 @@
 {
   "hello": "你好 世界",
-  "home":{
+  "home": {
     "changeLang": "切換語系"
+  },
+  "menu": {
+    "home": "首頁",
+    "about": "關於"
   }
 }

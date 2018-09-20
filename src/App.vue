@@ -23,12 +23,12 @@
     </v-toolbar>
     <v-navigation-drawer v-model="drawer" :width="200" clipped enable-resize-watcher fixed app>
       <v-list dense>
-        <v-list-tile value="true" v-for="(item, i) in menu" :key="i" :to="item.to">
+        <v-list-tile value="true" v-for="(item, i) in menu" :key="i" :to="item.href">
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
+            <v-list-tile-title v-text="$t(`menu.${item.title}`)"></v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
