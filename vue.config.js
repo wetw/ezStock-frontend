@@ -1,3 +1,11 @@
+let enableBaseUrl = false || process.env.enableBaseUrl;
+let baseUrl = '/';
+if (enableBaseUrl) {
+  baseUrl = process.env.baseUrl;
+}
+
 module.exports = {
-  runtimeCompiler: true
+  runtimeCompiler: true,
+  baseUrl: process.env.NODE_ENV === 'production' ?
+    baseUrl : '/'
 }
