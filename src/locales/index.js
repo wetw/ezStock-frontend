@@ -1,13 +1,10 @@
 //lang.js
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
-
 import zhTW from './zh-TW.json';
 import enUS from './en-US.json';
 
 Vue.use(VueI18n);
-
-const locale = 'en-US';
 
 const messages = {
   'en-US': enUS,
@@ -16,7 +13,7 @@ const messages = {
 
 const i18n = new VueI18n({
   /** 默认值 */
-  locale,
+  locale: window.localStorage.getItem('locale') ||  'en-US',
   messages
 });
 

@@ -56,6 +56,7 @@ export default {
       if (lang in this.$i18n.messages) {
         this.$i18n.locale = lang;
       }
+      this.$ls.set('locale', lang);
     }
   },
   computed: {
