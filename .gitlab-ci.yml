@@ -1,0 +1,23 @@
+image: node:8
+
+stages:
+  - deploy
+
+before_script:
+  - npm install
+
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  stage: deploy
+  script:
+    - npm run build
+    - mv -f dist/* public
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+  only:
+    - master
