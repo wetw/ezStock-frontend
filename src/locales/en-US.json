@@ -5,6 +5,11 @@
   },
   "menu": {
     "home": "Home",
-    "about": "About"
+    "cost": "Cost",
+    "investmentDetails": "Investment Details",
+    "unrealizedProfit": "Unrealized Profit",
+    "realizedProfit": "Realized Profit",
+    "accountInfo": "Account Info",
+    "settings": "Settings"
   }
 }

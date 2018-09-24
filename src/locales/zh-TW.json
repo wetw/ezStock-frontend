@@ -5,6 +5,11 @@
   },
   "menu": {
     "home": "首頁",
-    "about": "關於"
+    "cost": "成本",
+    "investmentDetails": "投資明細",
+    "unrealizedProfit": "未實現損益",
+    "realizedProfit": "已實現損益",
+    "accountInfo": "帳戶資訊",
+    "settings": "系統設定"
   }
 }
