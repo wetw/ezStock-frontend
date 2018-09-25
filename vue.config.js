@@ -1,4 +1,4 @@
-let enableBaseUrl = false || process.env.enableBaseUrl;
+let enableBaseUrl = 'true' === process.env.enableBaseUrl;
 let baseUrl = '/';
 if (enableBaseUrl) {
   baseUrl = process.env.baseUrl;
