@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import HelloWorld from '@/components/HelloWorld';
+import Investement from '@/pages/InvestementDetails';
 
 Vue.use(VueRouter)
 const Foo = {
@@ -22,6 +23,10 @@ export default new VueRouter({
     {
       path: '/',
       component: HelloWorld
+    },
+    {
+      path: '/investmentDetails',
+      component: Investement
     }
   ]
 });
