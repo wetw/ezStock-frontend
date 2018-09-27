@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import HelloWorld from '@/components/HelloWorld';
-import Investement from '@/pages/InvestementDetails';
+import Investement from '@/views/InvestementDetails';
 
 Vue.use(VueRouter)
 const Foo = {

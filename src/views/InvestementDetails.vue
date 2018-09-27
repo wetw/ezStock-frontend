@@ -10,7 +10,7 @@ import VeLine from 'v-charts/lib/line.common'
 
 export default {
   components: { VeLine },
-  name: 'Investement Details',
+  name: 'InvestementDetails',
   data() {
     return {
       chartSettings: {
