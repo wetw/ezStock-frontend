@@ -11,7 +11,7 @@ const Bar = {
   template: '<div>bar</div>'
 };
 
-export default new VueRouter({
+const router = new VueRouter({
   routes: [{
       path: '/foo',
       component: Foo
@@ -30,3 +30,10 @@ export default new VueRouter({
     }
   ]
 });
+
+router.beforeEach((to, from, next) => {
+  global.store.commit('setPageTitle', to.path);
+  next();
+});
+
+export default router;

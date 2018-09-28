@@ -5,6 +5,12 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    menu
+    menu,
+    pageTitle: 'home'
+  },
+  mutations: {
+    setPageTitle(state, data) {
+      state.pageTitle = menu.find(x => x.href === data).title;
+    }
   }
 });

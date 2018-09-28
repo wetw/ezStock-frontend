@@ -2,7 +2,7 @@
   <v-app dark>
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>{{$t(`menu.${pageTitle}`)}}</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-menu offset-y>
         <v-toolbar-title slot="activator">
@@ -60,7 +60,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['menu'])
+    ...mapState(['menu', 'pageTitle'])
   }
 };
 </script>

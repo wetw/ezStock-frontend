@@ -9,6 +9,7 @@ import store from './store';
 import Vue from 'vue';
 import VueLocalStorage from 'vue-localstorage';
 
+global.store = store;
 Vue.config.productionTip = false;
 
 // you can specify any other name and use it via this.$ls, this.$whatEverYouWant
