@@ -1,8 +1,7 @@
-//lang.js
+import enUS from './en-US.json';
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import zhTW from './zh-TW.json';
-import enUS from './en-US.json';
 
 Vue.use(VueI18n);
 

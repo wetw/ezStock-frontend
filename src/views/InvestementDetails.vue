@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import VeLine from 'v-charts/lib/line.common'
+import VeLine from 'v-charts/lib/line.common';
 
 export default {
   components: { VeLine },
@@ -32,9 +32,9 @@ export default {
           { '日期': '2018-01-20', '访问用户': 4593, '下单用户': 4293, '下单率': 0.78 }
         ]
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

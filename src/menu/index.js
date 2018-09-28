@@ -33,4 +33,4 @@ export default [{
     icon: 'settings',
     href: '/settings'
   }
-]
+];
