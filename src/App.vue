@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
 export default {
   name: 'App',
@@ -60,7 +60,8 @@ export default {
     }
   },
   computed: {
-    ...mapState(['menu', 'pageTitle'])
+    ...mapState(['pageTitle']),
+    ...mapGetters(['menu'])
   }
 };
 </script>
