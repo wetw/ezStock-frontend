@@ -1,11 +1,13 @@
 import '@babel/polyfill';
-import Vue from 'vue';
+import './http';
 import './plugins/vuetify';
 import App from './App';
-import VueLocalStorage from 'vue-localstorage';
+import config from './config';
 import i18n from './locales';
 import router from './router';
 import store from './store';
+import Vue from 'vue';
+import VueLocalStorage from 'vue-localstorage';
 
 Vue.config.productionTip = false;
 
@@ -19,5 +21,6 @@ new Vue({
   i18n,
   router,
   store,
+  config,
   render: h => h(App)
 }).$mount('#app');
