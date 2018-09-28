@@ -12,7 +12,7 @@ const messages = {
 
 const i18n = new VueI18n({
   /** 默认值 */
-  locale: window.localStorage.getItem('locale') ||  'en-US',
+  locale: window.localStorage.getItem('locale') || 'en-US',
   messages
 });
 

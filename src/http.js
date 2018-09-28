@@ -7,7 +7,7 @@ if (!config.debug.mock) {
   mock.restore();
 }
 
-var http = axios.create({
+let http = axios.create({
   baseURL: config.baseUrl,
   timeout: 1000
   // headers: { 'Authorization': 'Bearer ' + localStorage.getItem('token') }

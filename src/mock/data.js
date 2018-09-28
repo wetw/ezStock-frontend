@@ -14,9 +14,9 @@ for (let i = 1; i <= 30; i++) {
     avatar: '@image',
     nickname: '@name',
     // avatar: Mock.Random.image(),
-    created_at: '@datetime',
-    updated_at: '@datetime',
-    deleted_at: null
+    createdAt: '@datetime',
+    updatedAt: '@datetime',
+    deletedAt: null
   }));
 }
 
@@ -26,9 +26,9 @@ for (let i = 1; i <= 6; i++) {
   data.types.push(Mock.mock({
     id: i,
     name: '@first',
-    created_at: '@datetime',
-    updated_at: '@datetime',
-    deleted_at: null
+    createdAt: '@datetime',
+    updatedAt: '@datetime',
+    deletedAt: null
   }));
 }
 
@@ -40,9 +40,9 @@ for (let i = 1; i <= 33; i++) {
     'type|1': data.types,
     'user_id|1-10': 1,
     'user|1': data.users,
-    created_at: '@datetime',
-    updated_at: '@datetime',
-    deleted_at: null
+    createdAt: '@datetime',
+    updatedAt: '@datetime',
+    deletedAt: null
   }));
 }
 
@@ -54,9 +54,9 @@ for (let i = 1; i <= 20; i++) {
     'post|1': data.posts,
     'user_id|1-10': 1,
     'user|1': data.users,
-    created_at: '@datetime',
-    updated_at: '@datetime',
-    deleted_at: null
+    createdAt: '@datetime',
+    updatedAt: '@datetime',
+    deletedAt: null
   }));
 }
 
