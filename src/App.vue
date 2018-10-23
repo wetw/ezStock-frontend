@@ -21,7 +21,7 @@
         </v-list>
       </v-menu>
     </v-toolbar>
-    <v-navigation-drawer v-model="drawer" :width="200" clipped enable-resize-watcher fixed app>
+    <v-navigation-drawer v-model="drawer" :width="205" clipped enable-resize-watcher app>
       <v-list>
         <v-list-tile v-for="(item, i) in menu" :key="i" :to="item.href">
           <v-list-tile-action>
