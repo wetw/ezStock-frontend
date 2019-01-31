@@ -1,21 +1,25 @@
-# my-first-vue
+# ezStock
 
 ## Project setup
-```
+
+```sh
 npm install
 ```
 
 ### Compiles and hot-reloads for development
-```
-npm run serve
+
+```sh
+npm start
 ```
 
 ### Compiles and minifies for production
-```
+
+```sh
 npm run build
 ```
 
 ### Lints and fixes files
-```
+
+```sh
 npm run lint
 ```
