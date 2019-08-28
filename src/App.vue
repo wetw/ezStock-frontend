@@ -12,7 +12,7 @@
           </v-tooltip>
         </v-toolbar-title>
         <v-list>
-          <v-list-tile v-for="(lang, i) in langs" :key="i" @mouseover="setLang(lang.value)">
+          <v-list-tile v-for="(lang, i) in langs" :key="i" @click="setLang(lang.value)">
             <v-list-tile-action>
               <v-icon v-if="$i18n.locale===lang.value">check</v-icon>
             </v-list-tile-action>
