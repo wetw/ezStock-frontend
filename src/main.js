@@ -1,6 +1,5 @@
 import '@babel/polyfill';
 import './http';
-import './plugins/vuetify';
 import App from './App';
 import config from './config';
 import i18n from './locales';
@@ -8,6 +7,7 @@ import router from './router';
 import store from './store';
 import Vue from 'vue';
 import VueLocalStorage from 'vue-localstorage';
+import vuetify from './plugins/vuetify';
 
 global.store = store;
 Vue.config.productionTip = false;
@@ -19,6 +19,7 @@ Vue.use(VueLocalStorage, {
 });
 
 new Vue({
+  vuetify,
   i18n,
   router,
   store,

@@ -1,38 +1,41 @@
 <template>
   <v-app dark>
-    <v-toolbar app fixed clipped-left>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+    <v-app-bar app fixed clipped-left>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>{{$t(`menu.${pageTitle}`)}}</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-menu offset-y>
-        <v-toolbar-title slot="activator">
-          <v-tooltip left>
-            <v-icon slot="activator" debounce="200">language</v-icon>
-            <span>{{$t("home.changeLang")}}</span>
-          </v-tooltip>
-        </v-toolbar-title>
+
+      <div class="flex-grow-1"></div>
+      <v-menu left bottom>
+        <template v-slot:activator="{ on }">
+          <v-btn icon v-on="on">
+            <v-icon debounce="200">language</v-icon>
+            <!-- <span>{{$t("home.changeLang")}}</span> -->
+          </v-btn>
+        </template>
         <v-list>
-          <v-list-tile v-for="(lang, i) in langs" :key="i" @click="setLang(lang.value)">
-            <v-list-tile-action>
+          <v-list-item v-for="(lang, i) in langs" :key="i" @click="setLang(lang.value)">
+            <v-list-item-action>
               <v-icon v-if="$i18n.locale===lang.value">check</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-title>{{ lang.title }}</v-list-tile-title>
-          </v-list-tile>
+            </v-list-item-action>
+            <v-list-item-title>{{ lang.title }}</v-list-item-title>
+          </v-list-item>
         </v-list>
       </v-menu>
-    </v-toolbar>
-    <v-navigation-drawer v-model="drawer" :width="205" clipped enable-resize-watcher app>
+    </v-app-bar>
+
+    <v-navigation-drawer v-model="drawer" :width="205" clipped app>
       <v-list>
-        <v-list-tile v-for="(item, i) in menu" :key="i" :to="item.href">
-          <v-list-tile-action>
+        <v-list-item v-for="(item, i) in menu" :key="i" :to="item.href">
+          <v-list-item-action>
             <v-icon v-html="item.icon"></v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="$t(`menu.${item.title}`)"></v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title v-text="$t(`menu.${item.title}`)"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
+
     <v-content fluid fill-height>
       <router-view></router-view>
     </v-content>
