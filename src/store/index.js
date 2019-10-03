@@ -13,6 +13,6 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    menu:() => menu
+    menu: () => menu
   }
 });

@@ -1,4 +1,5 @@
-export default [{
+export default [
+  {
     title: 'home',
     icon: 'home',
     href: '/'

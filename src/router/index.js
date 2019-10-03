@@ -12,7 +12,8 @@ const Bar = {
 };
 
 const router = new VueRouter({
-  routes: [{
+  routes: [
+    {
       path: '/foo',
       component: Foo
     },

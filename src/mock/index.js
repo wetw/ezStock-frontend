@@ -15,10 +15,13 @@ mock.onGet('/stocks').reply(200, {
   data: stocks
 });
 
-mock.onGet(/\/stocks\/\w+/).reply((config) => {
-  return [200, {
-    data: stocks.find(x => x.id === config.url.split('/')[1])
-  }];
+mock.onGet(/\/stocks\/\w+/).reply(config => {
+  return [
+    200,
+    {
+      data: stocks.find(x => x.id === config.url.split('/')[1])
+    }
+  ];
 });
 
 export default mock;

@@ -2,9 +2,9 @@
   <v-container fluid>
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
-        <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
+        <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5" />
         <blockquote>
-          <h2>{{ $t("hello") }}</h2>
+          <h2>{{ $t('hello') }}</h2>
           <footer>
             <small>
               <em>&mdash;John Johnson</em>
@@ -19,7 +19,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'HelloWorld',
   props: {

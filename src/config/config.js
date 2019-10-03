@@ -3,5 +3,5 @@ export default {
     mock: true,
     http: false
   },
-  baseUrl: 'http://localhost/',
+  baseUrl: 'http://localhost/'
 };
