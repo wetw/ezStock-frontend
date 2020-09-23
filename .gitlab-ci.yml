@@ -1,23 +1,69 @@
-image: node:8
+include:
+  - template: Code-Quality.gitlab-ci.yml
+  - template: DAST.gitlab-ci.yml
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Secret-Detection.gitlab-ci.yml
+
+secret_detection:
+  variables:
+    SECRET_DETECTION_HISTORIC_SCAN: "true"
+
+code_quality:
+  artifacts:
+    paths: [gl-code-quality-report.json]
+
+image: node:lts
 
 stages:
+  - build
+  - test
   - deploy
+  - dast
 
-before_script:
-  - npm install
+.cache_push:
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules/
 
-cache:
-  paths:
-    - node_modules/
+.cache_pull:
+  extends: .cache_push
+  cache:
+    # 避免工作結束後重新上傳快取
+    policy: pull
+
+install_dependencies:
+  stage: .pre
+  extends: .cache_push
+  script:
+    - npm ci
+  rules:
+    - changes:
+        - package-lock.json
+    # 當存在 node_modules/** 檔案則略過
+    - exists:
+      - node_modules/**
+      when: never
+
+build:
+  stage: build
+  extends: .cache_pull
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
 
 pages:
   stage: deploy
   script:
-    - npm run build
     - mv -f dist/* public
+  dependencies:
+    - build
   artifacts:
     paths:
       - public
-    expire_in: 30 days
   only:
     - master
