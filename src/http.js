@@ -9,20 +9,20 @@ if (!config.debug.mock) {
 
 let http = axios.create({
   baseURL: config.baseUrl,
-  timeout: 1000
+  timeout: 1000,
   // headers: { 'Authorization': 'Bearer ' + localStorage.getItem('token') }
 });
 http.interceptors.request.use(
-  function(request) {
+  function (request) {
     return request;
   },
-  function(error) {
+  function (error) {
     // Do something with request error
     return Promise.reject(error);
   }
 );
 http.interceptors.response.use(
-  function(response) {
+  function (response) {
     const request = response.config;
     if (config.debug.http) {
       console.debug(
@@ -37,7 +37,7 @@ http.interceptors.response.use(
     }
     return response;
   },
-  function(error) {
+  function (error) {
     if (config.debug.http) {
       let { response, config: request } = error;
       if (request) {

@@ -2,36 +2,36 @@ export default [
   {
     title: 'home',
     icon: 'home',
-    href: '/'
+    href: '/',
   },
   {
     title: 'cost',
     icon: 'monetization_on',
-    href: '/cost'
+    href: '/cost',
   },
   {
     title: 'investmentDetails',
     icon: 'list_alt',
-    href: '/investmentDetails'
+    href: '/investmentDetails',
   },
   {
     title: 'unrealizedProfit',
     icon: 'show_chart',
-    href: '/unrealizedProfit'
+    href: '/unrealizedProfit',
   },
   {
     title: 'realizedProfit',
     icon: 'payment',
-    href: '/realizedProfit'
+    href: '/realizedProfit',
   },
   {
     title: 'accountInfo',
     icon: 'account_balance',
-    href: '/accountInfo'
+    href: '/accountInfo',
   },
   {
     title: 'settings',
     icon: 'settings',
-    href: '/settings'
-  }
+    href: '/settings',
+  },
 ];

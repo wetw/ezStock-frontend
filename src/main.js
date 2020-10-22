@@ -15,7 +15,7 @@ Vue.config.productionTip = false;
 // you can specify any other name and use it via this.$ls, this.$whatEverYouWant
 Vue.use(VueLocalStorage, {
   name: 'ls',
-  bind: true //created computed members from your variable declarations
+  bind: true, //created computed members from your variable declarations
 });
 
 new Vue({
@@ -24,5 +24,5 @@ new Vue({
   router,
   store,
   config,
-  render: h => h(App)
+  render: h => h(App),
 }).$mount('#app');

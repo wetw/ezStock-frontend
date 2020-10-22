@@ -4,7 +4,7 @@ let data = {
   users: [],
   types: [],
   posts: [],
-  comments: []
+  comments: [],
 };
 for (let i = 1; i <= 30; i++) {
   data.users.push(
@@ -17,7 +17,7 @@ for (let i = 1; i <= 30; i++) {
       // avatar: Mock.Random.image(),
       createdAt: '@datetime',
       updatedAt: '@datetime',
-      deletedAt: null
+      deletedAt: null,
     })
   );
 }
@@ -31,7 +31,7 @@ for (let i = 1; i <= 6; i++) {
       name: '@first',
       createdAt: '@datetime',
       updatedAt: '@datetime',
-      deletedAt: null
+      deletedAt: null,
     })
   );
 }
@@ -47,7 +47,7 @@ for (let i = 1; i <= 33; i++) {
       'user|1': data.users,
       createdAt: '@datetime',
       updatedAt: '@datetime',
-      deletedAt: null
+      deletedAt: null,
     })
   );
 }
@@ -63,7 +63,7 @@ for (let i = 1; i <= 20; i++) {
       'user|1': data.users,
       createdAt: '@datetime',
       updatedAt: '@datetime',
-      deletedAt: null
+      deletedAt: null,
     })
   );
 }

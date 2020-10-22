@@ -57,8 +57,8 @@ export default {
     drawer: false,
     langs: [
       { title: '繁體中文', value: 'zh-TW' },
-      { title: 'English', value: 'en-US' }
-    ]
+      { title: 'English', value: 'en-US' },
+    ],
   }),
   methods: {
     setLang(lang) {
@@ -66,11 +66,11 @@ export default {
         this.$i18n.locale = lang;
       }
       this.$ls.set('locale', lang);
-    }
+    },
   },
   computed: {
     ...mapState(['pageTitle']),
-    ...mapGetters(['menu'])
-  }
+    ...mapGetters(['menu']),
+  },
 };
 </script>

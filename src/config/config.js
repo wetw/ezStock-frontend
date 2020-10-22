@@ -1,7 +1,7 @@
 export default {
   debug: {
     mock: true,
-    http: false
+    http: false,
   },
-  baseUrl: 'http://localhost/'
+  baseUrl: 'http://localhost/',
 };

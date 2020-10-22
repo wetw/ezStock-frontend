@@ -7,13 +7,13 @@ Vue.use(VueI18n);
 
 const messages = {
   'en-US': enUS,
-  'zh-TW': zhTW
+  'zh-TW': zhTW,
 };
 
 const i18n = new VueI18n({
   /** 默认值 */
   locale: window.localStorage.getItem('locale') || 'en-US',
-  messages
+  messages,
 });
 
 export default i18n;

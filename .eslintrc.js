@@ -4,7 +4,7 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
   },
   extends: ['plugin:vue/essential', '@vue/prettier', 'prettier/vue'],
   rules: {
@@ -13,8 +13,8 @@ module.exports = {
     'no-console': [
       'error',
       {
-        allow: ['warn', 'error', 'debug']
-      }
+        allow: ['warn', 'error', 'debug'],
+      },
     ],
     // 結尾;
     semi: ['error'],
@@ -23,8 +23,8 @@ module.exports = {
       {
         ignoreCase: true,
         ignoreMemberSort: true,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
-      }
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+      },
     ],
     // 必須使用 ===
     eqeqeq: 2,
@@ -38,8 +38,8 @@ module.exports = {
     'no-multiple-empty-lines': [
       1,
       {
-        max: 1
-      }
+        max: 1,
+      },
     ],
     // 不能用多餘的空格
     'no-multi-spaces': 1,
@@ -48,9 +48,9 @@ module.exports = {
     // key不能重複 ex. {a:1,a:1}
     'no-dupe-keys': 2,
     // args不能重複
-    'no-dupe-args': 2
+    'no-dupe-args': 2,
   },
   parserOptions: {
-    parser: 'babel-eslint'
-  }
+    parser: 'babel-eslint',
+  },
 };

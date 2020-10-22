@@ -5,14 +5,14 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    pageTitle: 'home'
+    pageTitle: 'home',
   },
   mutations: {
     setPageTitle(state, data) {
       state.pageTitle = menu.find(x => x.href === data).title;
-    }
+    },
   },
   getters: {
-    menu: () => menu
-  }
+    menu: () => menu,
+  },
 });
