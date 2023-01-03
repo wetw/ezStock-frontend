@@ -21,7 +21,7 @@
     "@mdi/font": "5.7.55",
     "@vue/cli-plugin-babel": "4.5.8",
     "@vue/cli-plugin-eslint": "4.5.8",
-    "@vue/cli-service": "4.5.8",
+    "@vue/cli-service": "5.0.8",
     "@vue/eslint-config-prettier": "6.0.0",
     "axios": "0.20.0",
     "axios-mock-adapter": "1.18.2",
